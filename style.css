@@ -1,1 +1,78 @@
-changed
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Animated Purple-Blue Background */
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(-45deg, #6a00f4, #4cc9f0, #7209b7, #3a0ca3);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* Glassy Black Calculator */
+.calculator{
+    width:320px;
+    padding:20px;
+    border-radius:20px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* Display */
+.display input{
+    width:100%;
+    height:60px;
+    border:none;
+    outline:none;
+    text-align:right;
+    font-size:28px;
+    padding:10px;
+    border-radius:12px;
+    background: rgba(255,255,255,0.1);
+    color:#fff;
+}
+
+/* Buttons Grid */
+.buttons{
+    margin-top:15px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:12px;
+}
+
+button{
+    height:55px;
+    border:none;
+    border-radius:12px;
+    font-size:20px;
+    cursor:pointer;
+    color:white;
+    transition:0.2s;
+    font-weight:bold;
+}
+
+/* Key Colors */
+.number{ background:#4361ee; }
+.operator{ background:#f72585; }
+.equal{ background:#4cc9f0; }
+.clear{ background:#ff4d4d; }
+.zero{ grid-column: span 2; background:#4895ef; }
+
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
